@@ -4,16 +4,25 @@ Routes and views for the bottle application.
 
 from bottle import route, view, response, request
 import os
+import json
 
 myphoto = 'https://avatars0.githubusercontent.com/u/6077501?v=3&s=460'
 visit = 0
 
+database = open('data.json')
+
 def check_visit():
     try:
         cookie = request.get_cookie("visit")
+        data = json.load(database)
+        data['visit'] += 1
+        json.dump(data, database)
     except (NameError, TypeError):
         response.set_cookie("visit", str(True))
-        visit += 1
+        data = dict()
+        data['visit'] = 1
+        json.dump(data, database)
+
 
 
 @route('/')
