@@ -6,12 +6,14 @@ from bottle import route, view, response, request
 import os
 
 myphoto = 'https://avatars0.githubusercontent.com/u/6077501?v=3&s=460'
+visit = 0
 
 def check_visit():
     try:
         cookie = request.get_cookie("visit")
     except (NameError, TypeError):
         response.set_cookie("visit", str(True))
+        visit += 1
 
 
 @route('/')
@@ -28,7 +30,7 @@ def home():
         scripts='',
         myPhoto=myphoto,
         aboutMe=info,
-        visits=0
+        visits=visit
     )
 
 @route('/gallery')
@@ -42,7 +44,7 @@ def gallery():
         stylesheet='gallery.css',
         scripts='<script>',
         pictures=pics,
-        visits=0
+        visits=visit
     )
 
 @route('/projects')
@@ -54,5 +56,5 @@ def projects():
     return dict(
         title='Projects',
         stylesheet='index2.css',
-        visits=0
+        visits=visit
     )
