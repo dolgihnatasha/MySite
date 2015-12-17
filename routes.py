@@ -19,7 +19,7 @@ def check_visit():
 @view('index')
 def home():
     """Renders the home page."""
-
+    check_visit()
     with open('aboutme.txt') as f:
         info = f.read()
     return dict(
@@ -27,19 +27,22 @@ def home():
         stylesheet='index.css',
         scripts='',
         myPhoto=myphoto,
-        aboutMe=info
+        aboutMe=info,
+        visits=0
     )
 
 @route('/gallery')
 @view('gallery')
 def gallery():
     """Renders the contact page."""
+    check_visit()
     pics = [f for x in os.walk('./static/RV/small/') for f in x[2]]
     return dict(
         title='Gallery',
         stylesheet='gallery.css',
         scripts='<script>',
-        pictures=pics
+        pictures=pics,
+        visits=0
     )
 
 @route('/projects')
@@ -47,7 +50,9 @@ def gallery():
 @view('projects')
 def projects():
     """Renders the project page."""
+    check_visit()
     return dict(
         title='Projects',
         stylesheet='index2.css',
+        visits=0
     )
