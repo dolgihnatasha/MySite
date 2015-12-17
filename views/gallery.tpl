@@ -1,4 +1,4 @@
-% rebase('layout.tpl', title=title, stylesheet=stylesheet)
+% rebase('layout.tpl', title=title, stylesheet=stylesheet, visits=visits)
 
 <section class="gallery">
     <input type="radio" name="pictures" class="closeImg" id="close" checked>

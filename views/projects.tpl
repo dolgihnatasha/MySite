@@ -1,4 +1,4 @@
-% rebase('layout.tpl', title=title, stylesheet=stylesheet)
+% rebase('layout.tpl', title=title, stylesheet=stylesheet, visits=visits)
 
 <h2>Tasks</h1>
 <div>

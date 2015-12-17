@@ -17,7 +17,7 @@
     <main>
         {{ !base }}
     </main>
-    <hr>
+    <div>visits:{{visits}}</div>
     <footer>
         <div class="links">
             <a target="_blank" href=""><img class="contactLink" alt="ufu link"
