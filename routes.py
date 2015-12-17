@@ -28,8 +28,8 @@ def add_visits(change):
     if change:
         data['visit'] += 1
         if request.get('REMOTE_ADDR') not in data['unique']:
-            data['unique'].add(request.get('REMOTE_ADDR'))
-    print(request.get('REMOTE_ADDR'))
+            data['unique'].append(request.get('REMOTE_ADDR'))
+    print(request.get('REMOTE_ADDR'), data)
     write_visits(data)
     return data
 
@@ -42,12 +42,10 @@ def get_visits():
 def check_visit():
     try:
         cookie = request.get_cookie("visited")
-        return add_visits(False)
+        return add_visits(True)
     except NameError:
         response.set_cookie("visited", str(True))
         return add_visits(True)
-    return add_visits()
-    return get_visits()
 
 
 
