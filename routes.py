@@ -34,17 +34,13 @@ def add_visits(change):
     return data
 
 
-def get_visits():
-    data = read_visits()
-    return data
-
-
 def check_visit():
-    try:
-        cookie = request.get_cookie("count")
+    cookie = request.get_cookie("visit")
+    print(cookie)
+    if cookie:
         return add_visits(False)
-    except NameError:
-        response.set_cookie("count", str(True), path='/')
+    else:
+        response.set_cookie("visit", str(1))
         return add_visits(True)
 
 
