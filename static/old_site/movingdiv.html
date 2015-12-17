@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div
+        {
+            position: absolute;
+        }
+        #runner
+        {
+            z-index: 2;
+            height: 120px;
+            width: 120px;
+            top: 100px;
+            background-image: url('http://www.netlore.ru/upload/files/19/p19d8jvtpho745kgb47m54g96n.jpg');
+        }
+    </style>
+</head>
+<!--body onclick="left" oncontextmenu="right(event)" id="body"-->
+<body>
+<div id="runner"></div>
+</body>
+<script type="text/javascript">
+    var runner = document.getElementById("runner");
+    var speed = 5;
+    var vertical = 1;
+    var horizontal = 1;
+    var timer;
+    var KEYCODE = {
+        UP: 38,
+        DOWN: 40,
+        F1: 112
+    };
+    var fomTop = Math.floor(Math.random() * window.innerHeight);
+    var fromLeft = Math.floor(Math.random() * window.innerWidth);
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF'.split('');
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    function animate() {
+        if (fomTop + 120 >= window.innerHeight) {
+            vertical = -1 - Math.floor(Math.random() * 2);
+
+            runner.style.backgroundColor = getRandomColor();
+        }
+        if (fromLeft + 120 >= window.innerWidth) {
+            horizontal = -1 - Math.floor(Math.random() * 2);
+            runner.style.backgroundColor = getRandomColor();
+        }
+        if (fomTop <= 0) {
+            vertical = 1 + Math.floor(Math.random() * 2);
+            runner.style.backgroundColor = getRandomColor();
+        }
+        if (fromLeft <= 0) {
+            horizontal = 1 + Math.floor(Math.random() * 2);
+            runner.style.backgroundColor = getRandomColor();
+        }
+        fromLeft += speed * horizontal;
+        fomTop += speed * vertical;
+        console.log(fomTop, window.innerHeight, window.innerWidth);
+        runner.style.top = fomTop + 'px';
+        runner.style.left = fromLeft + 'px';
+
+    }
+
+    document.getElementsByTagName('html').item(0).onkeydown = function(e) {
+        if (e.keyCode === KEYCODE.UP){
+            speed += 0.5;
+
+        } else if (e.keyCode === KEYCODE.DOWN){
+            speed -= 0.5
+        } else if (e.keyCode === KEYCODE.F1) {
+            alert('стрелка вверх - увеличить скорость;\nстрелка вниз - уменьшить скорость ');
+        }
+        if (speed <= 0) {
+            speed = 0;
+        }
+        //console.log(speed);
+    };
+//    function left(event) {}
+//
+//    function right(event) {
+//        if (event.preventDefault) {
+//            event.preventDefault();
+//        }
+//        if (event.returnValue) {
+//            event.returnValue = false;
+//        }
+//    }
+        function start() {
+            if (!timer) timer = setInterval(animate, 10);
+        }
+
+        start();
+</script>
+</html>

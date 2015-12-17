@@ -1,0 +1,132 @@
+input[name="pictures"]
+{
+    display: none;
+}
+main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0 0 0;
+}
+
+.gallery
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 45%;
+    padding: 0 5px;
+}
+.picContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: .5em;
+    width: 30%;
+    height: 200px;
+    min-width: 140px;
+}
+.picContainer:hover
+{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .6);
+}
+
+.picContainer .smallPic
+{
+    height: 100%;
+    width: 100%;
+}
+
+.picContainer label .picture
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.picFull
+{
+    display: none;
+    text-align: center;
+    position: fixed;
+    object-fit: cover;
+    bottom: 5%;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    max-height: 90%;
+    width: auto;
+    z-index: 100;
+}
+
+.cross
+{
+    position: absolute;
+    display: block;
+    right: 5%;
+    top: 0;
+    color: #fff;
+    height: 70px;
+    width: 70px;
+    font: 800 60px sans-serif;
+}
+
+.blackout
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, .6);
+    justify-content: center;
+    align-items: center;
+}
+
+.checkPicture:checked ~ .whiteback
+{
+    display: flex;
+    height: 95%;
+    width: 90%;
+    position: fixed;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.checkPicture:checked ~ .picFull
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkPicture:checked ~ .blackout
+{
+    display: flex;
+
+}
+.checkPicture:checked ~ .picFul .cross
+{
+    display: block;
+}
+
+.checkPicture:checked ~ .picFull .picture
+{
+    max-width: 90%;
+    max-height: 100%;
+    height: auto;
+}
+
+/*.checkPicture:checked ~ .blackout .loading*/
+/*{*/
+    /**/
+/*}*/
+
+

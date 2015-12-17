@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+    <style type="text/css">
+        #draggable {
+            font-size: x-large;
+            width: 50px;
+            height: 50px;
+            text-align: center; padding:10px}
+        #runnable {
+            width: 60px;
+            height: 60px;
+        }
+
+    </style>
+    <script type="text/javascript">
+        $(function() {
+
+            $('#draggable').draggable({
+                revert: function(valid) {
+                    animation();
+
+                }
+            });
+
+        });
+
+        function animation() {
+
+            var lr = parseInt(document.getElementById("runnable").offsetLeft);
+            var tr = parseInt(document.getElementById("runnable").offsetTop);
+            var ld = parseInt(document.getElementById("draggable").offsetLeft);
+            var td = parseInt(document.getElementById("draggable").offsetTop);
+
+            document.getElementById("runnable").style.left = ld + "px";
+            document.getElementById("runnable").style.top = td + "px";
+            setTimeout("animation()", 1);
+        }
+
+    </script>
+</head>
+<body>
+<div id="draggable" class="ui-widget ui-corner-all ui-state-error">
+
+</div>
+<div id="runnable" class="ui-widget ui-corner-all ui-state-error">
+
+</div>
+</body>
+</html>

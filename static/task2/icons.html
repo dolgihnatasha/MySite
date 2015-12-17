@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Иконки приложений</title>
+    <style>
+        a[href$=".pdf"]:before{
+            content: url("file_icons/pdf.png");
+            padding-left:2px;
+        }
+        a[href$=".doc"], a[href$=".docx"]:before{
+            content: url("file_icons/doc.png");
+            padding-left: 2px;
+        }
+        a[href$=".txt"]:before{
+            content: url("file_icons/txt.png");
+            padding-left: 2px;
+        }
+    </style>
+</head>
+<body>
+<h1 style="align-content: center;">Ссылки</h1>
+<a href="http://solod.zz.mu/edu/web/2_css_base/2_practice.pdf">2_practice.pdf</a><br>
+<a href="http://lastdiplom.ru/wp-content/uploads/2013/10/titulniy-list-referata-primer.docx">Титульный лист</a><br>
+<a href="file.txt">Текстовый файл</a>
+</body>
+</html>

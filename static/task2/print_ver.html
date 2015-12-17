@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../pictures/favicon.ico">
+    <title>Версия для печати</title>
+    <style>
+        @media print {
+            h1 {
+                color:black;
+                font-size: 36pt;
+                text-align:  center;
+            }
+            body{
+                background-color: white;
+                list-style: katakana;
+            }
+            a{
+                color: black;
+                text-decoration:none;
+            }
+
+            a[href]:after{
+                content: " ("attr(href)")";
+            }
+        }
+        @media screen{
+            h1{
+                color: blue;
+                font-size: 36pt;
+                text-align:  center;
+            }
+            body{
+                background-color: #d4d9eb;
+                list-style-type: circle;
+            }
+        }
+
+
+
+    </style>
+</head>
+
+
+<body>
+<h1> Версия для печати </h1>
+    <p>Это текст страницы<br></p>
+    <p>А тут ссылочки:<br></p>
+        <ul>
+            <li><a href="http://solod.zz.mu/edu/web/2_css_base/2_practice.pdf">
+                Задание
+            </a></li>
+            <li>
+                <a href="http://htmlbook.ru/">
+                    Справочник по HTML
+                </a><br>
+            </li>
+        </ul>
+</body>
+</html>

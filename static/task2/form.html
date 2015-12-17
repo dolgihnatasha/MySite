@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../pictures/favicon.ico">
+    <title>Form</title>
+    <style type="text/css">
+        .registry{
+            border: 3px solid #0276b2;
+            width: 400px;
+            height: 300px;
+            background-color: #0891cf;
+            color: #f5f6f4;
+            /*border-collapse: collapse;*/
+
+        }
+        h2 {
+            color: white;
+            font-family: Arial,serif;
+            font-weight: normal;
+            margin: 20px;
+        }
+        td {
+            font-family: Arial,serif;
+            padding: 10px;
+            padding-left: 20px;
+        }
+        button{
+            background: #ffdf80;
+            height: 25px;
+            width: 85px;
+        }
+    </style>
+</head>
+<body>
+<form method="POST" id="data" class="registry">
+    <h2>Регистрация</h2>
+    <hr>
+    <table >
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                E-mail <br>
+                <input form="data"
+                       type="email"
+                       name="answer"
+                       placeholder=""
+                       size="40">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Пароль <br>
+                <input form="data"
+                       type="password"
+                       name="answer"
+                       placeholder=""
+                        size="15">
+            </td>
+            <td>
+                Еще раз <br>
+                <input form="data"
+                       type="password"
+                       name="answer"
+                       placeholder=""
+                       size="15">
+            </td>
+
+
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit" class=""> Отправить </button>
+            </td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
