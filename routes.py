@@ -21,24 +21,33 @@ def read_visits():
     return data
 
 
-def add_visits():
+def add_visits(change):
     data = read_visits()
-    data['visit'] += 1
-    if data['unique']:
-        data['unique'] = set()
-    data['unique'].add(request.get('REMOTE_ADDR'))
+    if 'unique' not in data.keys():
+        data['unique'] = list()
+    if change:
+        data['visit'] += 1
+        if request.get('REMOTE_ADDR') not in data['unique']:
+            data['unique'].add(request.get('REMOTE_ADDR'))
     print(request.get('REMOTE_ADDR'))
     write_visits(data)
     return data
 
 
+def get_visits():
+    data = read_visits()
+    return data
+
+
 def check_visit():
     try:
-        cookie = request.get_cookie("visit")
-
-    except (NameError, TypeError):
-        response.set_cookie("visit", str(True))
-        add_visits()
+        cookie = request.get_cookie("visited")
+        return add_visits(False)
+    except NameError:
+        response.set_cookie("visited", str(True))
+        return add_visits(True)
+    return add_visits()
+    return get_visits()
 
 
 
