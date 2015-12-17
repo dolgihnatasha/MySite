@@ -41,10 +41,10 @@ def get_visits():
 
 def check_visit():
     try:
-        cookie = request.get_cookie("visited")
+        cookie = request.get_cookie("count")
         return add_visits(True)
     except NameError:
-        response.set_cookie("visited", str(True))
+        response.set_cookie("count", str(True))
         return add_visits(True)
 
 
