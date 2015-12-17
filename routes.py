@@ -9,19 +9,25 @@ import json
 myphoto = 'https://avatars0.githubusercontent.com/u/6077501?v=3&s=460'
 visit = 0
 
-database = open('data.json')
+def write_visits(data):
+    with open('data.json', 'w') as d:
+        json.dump(data, d)
+
+
+def read_visits():
+    with open('data.json', 'r') as d:
+        data = json.load(d)
+    return data
 
 def check_visit():
     try:
         cookie = request.get_cookie("visit")
-        data = json.load(database)
-        data['visit'] += 1
-        json.dump(data, database)
+
     except (NameError, TypeError):
         response.set_cookie("visit", str(True))
-        data = dict()
-        data['visit'] = 1
-        json.dump(data, database)
+    data = read_visits()
+    data['visit'] += 1
+    write_visits(data)
 
 
 
