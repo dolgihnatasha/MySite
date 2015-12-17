@@ -27,6 +27,7 @@ def check_visit():
         response.set_cookie("visit", str(True))
     data = read_visits()
     data['visit'] += 1
+    visit = data['visit']
     write_visits(data)
 
 
