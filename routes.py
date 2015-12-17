@@ -9,7 +9,7 @@ myphoto = 'https://avatars0.githubusercontent.com/u/6077501?v=3&s=460'
 
 def check_visit():
     try:
-        cookie = int(request.get_cookie("visit"))
+        cookie = request.get_cookie("visit")
     except (NameError, TypeError):
         response.set_cookie("visit", str(True))
 
