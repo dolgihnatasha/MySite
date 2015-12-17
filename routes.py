@@ -7,20 +7,19 @@ import os
 
 myphoto = 'https://avatars0.githubusercontent.com/u/6077501?v=3&s=460'
 
+def check_visit():
+    try:
+        cookie = int(request.get_cookie("visit"))
+    except (NameError, TypeError):
+        response.set_cookie("visit", str(True))
+
+
 @route('/')
 @route('/index')
 @view('index')
 def home():
-    try:
-        cookie = int(request.get_cookie("visit"))
-    except NameError:
-        response.set_cookie("visit", str(1), max_age=10)
-    except TypeError:
-        response.set_cookie("visit", str(1), max_age=10)
-    else:
-        print(cookie)
-        response.set_cookie("visit", str(cookie + 1), max_age=10)
     """Renders the home page."""
+
     with open('aboutme.txt') as f:
         info = f.read()
     return dict(
@@ -34,15 +33,6 @@ def home():
 @route('/gallery')
 @view('gallery')
 def gallery():
-    try:
-        cookie = int(request.get_cookie("visit"))
-    except NameError:
-        response.set_cookie("visit", str(1), max_age=10)
-    except TypeError:
-        response.set_cookie("visit", str(1), max_age=10)
-    else:
-        print(cookie)
-        response.set_cookie("visit", str(cookie + 1), max_age=10)
     """Renders the contact page."""
     pics = [f for x in os.walk('./static/RV/small/') for f in x[2]]
     return dict(
@@ -56,16 +46,7 @@ def gallery():
 @route('/index2')
 @view('projects')
 def projects():
-    try:
-        cookie = int(request.get_cookie("visit"))
-    except NameError:
-        response.set_cookie("visit", str(1), max_age=10)
-    except TypeError:
-        response.set_cookie("visit", str(1), max_age=10)
-    else:
-        print(cookie)
-        response.set_cookie("visit", str(cookie + 1), max_age=10)
-
+    """Renders the project page."""
     return dict(
         title='Projects',
         stylesheet='index2.css',
