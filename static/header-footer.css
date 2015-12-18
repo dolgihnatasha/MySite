@@ -9,6 +9,10 @@
     src: url(fonts/katherine_plus.ttf);
 }
 
+body, main, footer, section, article {
+    display: block;
+}
+
 header
 {
     display: flex;
@@ -17,12 +21,10 @@ header
     height: 200px;
     border-radius: 20px;
 }
-
 header
 {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
 }
-
 .menuItem
 {
     height: 80px;
@@ -39,7 +41,6 @@ header
     text-shadow:#fff 0 0 5px;
 }
 
-
 html,
 body
 {
@@ -50,13 +51,11 @@ body
 {
     min-height: 100%;
 }
-
 .main
 {
     overflow:auto;
     padding-bottom: 60px;
 }
-
 footer
 {
     position: relative;
@@ -64,14 +63,12 @@ footer
     height: 60px;
     clear:both;
 }
-
 footer .mylink
 {
     display: inline-block;
     text-align: right;
 }
-
-img.contactLink
+.contactLink
 {
     height: 40px;
 }

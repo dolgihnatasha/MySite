@@ -1,21 +1,16 @@
-@font-face
-{
-    font-family: menuTitleFont;
-    src: url(fonts/title.ttf);
-}
-body, main, footer, section, article {
-    display: block;
-}
-#myPhoto {
+
+
+
+.myPhoto {
     width: 30%;
     float: left;
     height: 100%;
 }
-#myPhoto img
+.myPhoto img
 {
     width: 100%;
 }
-#myInfo {
+.myInfo {
     margin-left: 10px;
     width: 59%;
     float: left;

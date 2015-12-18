@@ -3,8 +3,7 @@ input[name="pictures"]
     display: none;
 }
 
-.gallery
-{}
+
 .picContainer
 {
     margin-top: 10px;
@@ -74,16 +73,16 @@ input[name="pictures"]
 {
     height: 95%;
     width: 90%;
-    position: fixed;
+    position: relative;
     background-color: #fff;
-    justify-content: center;
-    align-items: center;
+    top: 50%;
+    bottom: 50%;
 }
 
 
 .checkPicture:checked ~ .picFull
 {
-    display: flex;
+    display: flex; /*fix for ie 8*/
     align-items: center;
     justify-content: center;
 }
