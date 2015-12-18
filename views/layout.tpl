@@ -25,7 +25,7 @@
                 src="http://cs623830.vk.me/v623830655/5f663/1QOVEtPLi9Q.jpg"></a>
         </div>
         <div>
-            <p>Посещений:{{visits['visits'}}</p>
+            <p>Посещений:{{visits['visits']}}</p>
             <p>Уникальных:{{len(visits['unique'])}}</p>
         </div>
         <div class="links">
