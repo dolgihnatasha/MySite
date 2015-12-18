@@ -1,11 +1,12 @@
-.myPhoto {
+.myPhoto
+{
     height: 100%;
 }
 .myPhoto img
 {
     width: 100%;
 }
-.myInfo {
-
+.myInfo
+{
     font-size: larger;
 }
