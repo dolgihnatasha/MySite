@@ -58,7 +58,7 @@ def home():
         scripts='',
         myPhoto=myphoto,
         aboutMe=info,
-        visits=v['visits'],
+        visits=v['visit'],
         unique=len(v['unique'])
     )
 
@@ -73,7 +73,7 @@ def gallery():
         stylesheet='gallery.css',
         scripts='',
         pictures=pics,
-        visits=v['visits'],
+        visits=v['visit'],
         unique=len(v['unique'])
     )
 
@@ -86,6 +86,6 @@ def projects():
     return dict(
         title='Projects',
         stylesheet='index2.css',
-        visits=v['visits'],
+        visits=v['visit'],
         unique=len(v['unique'])
     )
