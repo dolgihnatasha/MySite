@@ -1,4 +1,4 @@
-% rebase('layout.tpl', title=title, stylesheet=stylesheet, visits=visits, unique=unique)
+% rebase('layout.tpl', *args, *kwargs)
 
 <section class="main">
     <h2>Обо мне</h2>
