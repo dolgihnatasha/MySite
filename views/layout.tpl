@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="static/{{ stylesheet }}">
-    <link rel="stylesheet" href="static/header-footer.css">
+    <link rel="stylesheet" href="../static/{{ stylesheet }}">
+    <link rel="stylesheet" href="../static/header-footer.css">
 </head>
 <body>
     <header>
@@ -17,7 +17,6 @@
     <main>
         {{ !base }}
     </main>
-
     <footer>
         <div class="links">
             <a target="_blank" href=""><img class="contactLink" alt="ufu link"
@@ -26,8 +25,8 @@
                 src="http://cs623830.vk.me/v623830655/5f663/1QOVEtPLi9Q.jpg"></a>
         </div>
         <div>
-            <p>Посещений:{{visits}}</p>
-            <p>Уникальных:{{unique}}</p>
+            <p>РџРѕСЃРµС‰РµРЅРёР№:{{visits['visits'}}</p>
+            <p>РЈРЅРёРєР°Р»СЊРЅС‹С…:{{len(visits['unique'])}}</p>
         </div>
         <div class="links">
             <a target="_blank" href="https://vk.com/natasha.glukhovtseva"><img class="contactLink" alt="vk link"
