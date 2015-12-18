@@ -1,9 +1,4 @@
-
-
-
 .myPhoto {
-    width: 30%;
-    float: left;
     height: 100%;
 }
 .myPhoto img
@@ -11,8 +6,6 @@
     width: 100%;
 }
 .myInfo {
-    margin-left: 10px;
-    width: 59%;
-    float: left;
+
     font-size: larger;
 }
