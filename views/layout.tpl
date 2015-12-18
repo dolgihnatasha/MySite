@@ -17,13 +17,17 @@
     <main>
         {{ !base }}
     </main>
-    <div>visits:{{visits}}</div>
+
     <footer>
         <div class="links">
             <a target="_blank" href=""><img class="contactLink" alt="ufu link"
                 src="https://sts.urfu.ru/adfs/portal/logo/logo.ru.png?id=C87B799C7B171E40C45B877734E33A187F073FA49E811309F93601B84A38E7CF"></a>
             <a target="_blank" href=""><img class="contactLink" alt="mm link"
                 src="http://cs623830.vk.me/v623830655/5f663/1QOVEtPLi9Q.jpg"></a>
+        </div>
+        <div>
+            <p>Посещений:{{visits}}</p>
+            <p>Уникальных:{{unique}}</p>
         </div>
         <div class="links">
             <a target="_blank" href="https://vk.com/natasha.glukhovtseva"><img class="contactLink" alt="vk link"
