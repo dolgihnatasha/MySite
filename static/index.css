@@ -1,3 +1,15 @@
+@font-face
+{
+    font-family: h1Font;
+    src: url(fonts/good_vibes.ttf);
+}
+
+h1
+{
+    font-family: h1Font, footerFont, Arial, sans-serif;
+    font-size: 30px;
+}
+
 .myPhoto
 {
     height: 100%;

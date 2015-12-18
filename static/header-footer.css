@@ -1,7 +1,7 @@
 @font-face
 {
     font-family: menuTitleFont;
-    src: url(fonts/title.ttf);
+    src: url(fonts/amplify.ttf);
 }
 @font-face
 {
@@ -31,8 +31,10 @@ header
     color: #fff;
     border-radius: 20px;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
     font-family: menuTitleFont, Arial, sans-serif;
+    text-decoration: none;
+    text-shadow: 0 0 10px #000;
 }
 .menuItem:hover
 {
