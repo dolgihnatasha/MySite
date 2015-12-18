@@ -3,91 +3,86 @@
     font-family: menuTitleFont;
     src: url(fonts/title.ttf);
 }
-
-header {
-    background: url('https://ict.swisscom.ch/wp-content/uploads/2015/09/tokyo.jpg') 30% 30% no-repeat;
-    background-size: 130%;
-    width: 100%;
-    height: 200px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .6);
-}
-
-.menuItem{
-    border: 1px solid transparent;
-    height: 80px;
-    width: 33%;
-    float: left;
-    color: #fff;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 30px;
-    font-family: menuTitleFont, Arial, serif;
-}
-.menuItem:hover{
-    border: 1px solid transparent;
-    color:#fff;
-    background-color:transparent;
-    text-shadow:#fff 0 0 5px;
-}
-.menuContainer{
-    padding-top: 120px;
-}
-.main {
-    margin:20px;
-    display: inline-block;
-}
-
-footer
+@font-face
 {
-    display: flex;
-    justify-content: space-between;
+    font-family: footerFont;
+    src: url(fonts/katherine_plus.ttf);
 }
 
-.contactLink
-{
-    max-height: 35px;
-    margin-bottom: 10px;
-}
+/*.menuContainer{*/
+    /*padding-top: 120px;*/
+/*}*/
+/*.main {*/
+    /*margin:20px;*/
+    /*display: inline-block;*/
+/*}*/
 
-body
-{
-    display: flex;
-    flex-direction: column;
-    min-width: 500px;
-}
+
+
 
 header {
     display: flex;
     background: url('https://ict.swisscom.ch/wp-content/uploads/2015/09/tokyo.jpg') 30% 30% no-repeat;
     background-size: 130%;
     width: 100%;
-    height: 200px;
+    height: 20%;
     border-radius: 20px;
     -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
     -moz-box-shadow:    0 0 20px 0 rgba(0, 0, 0, 0.6);
     box-shadow:         0 0 20px 0 rgba(0, 0, 0, 0.6);
-
 }
-.menuItem{
-    border: 1px solid transparent;
+.menuItem {
     height: 80px;
-    width: 33%;
     color: #fff;
     border-radius: 20px;
     text-align: center;
-    font-size: 30px;
-    font-family: menuTitleFont, Arial, serif;
+    font-size: 2em;
+    font-family: menuTitleFont, Arial, sans-serif;
 }
 .menuItem:hover{
-    border: 1px solid transparent;
     color:#fff;
     background-color:transparent;
     text-shadow:#fff 0 0 5px;
 }
-.menuContainer{
-    display: flex;
-    padding-top: 120px;
-    width: 100%;
-    flex-direction: row;
+
+html, body {
+    height: 100%;
+}
+.main {
+    min-height: 80%;
+    /* equal to footer height */
+    margin-bottom: -60px;
+}
+.main:after {
+    content: "";
+    display: block;
+}
+footer, .main:after {
+    height: 60px;
+}
+footer {
+    background: orange;
+}
+
+footer
+{
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px double black;
+}
+
+footer .mylink
+{
+    display: inline-block;
+    text-align: right;
+}
+
+.contactLink
+{
+    max-height: 40px;
+}
+
+footer .visits {
+    font-family: footerFont, Arial, sans-serif;
+    font-size: 1.6em;
 }
