@@ -131,14 +131,15 @@ input[name="pictures"]
 
 .loading
 {
-    height: 10%;
-    width: 10%;
-    vertical-align: middle;
+    max-height: 10%;
+    max-width: 10%;
     position: absolute;
-    box-sizing: border-box;
-    background-color: #fff;
-    top: 45%;
-    left: 45%;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin: auto;
+    z-index: 10;
 }
 
 

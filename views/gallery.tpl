@@ -12,8 +12,9 @@
                     <label for="close" class="cross">
                         <img src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/cross-24-512.png">
                     </label>
-                    <img class="loading"
-                         src="http://www.novalnet.de/sites/all/themes/novalnetag/images/ajax-loader.gif">
+                    <img class="loading" src="http://tobago.it/fragments/loading.gif">
+                    <!--<img class="loading"-->
+                         <!--src="http://www.novalnet.de/sites/all/themes/novalnetag/images/ajax-loader.gif">-->
                 </div>
             </div>
             <label class="smallPic" for="pic{{ i }}">
