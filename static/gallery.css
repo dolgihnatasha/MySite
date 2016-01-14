@@ -106,8 +106,8 @@ input[name="pictures"]
     display: block;
     right: 1%;
     top: 1%;
-    height: 5%;
-    width: 5%;
+    height: 40px;
+    width: 40px;
 }
 
 .cross img
@@ -118,16 +118,20 @@ input[name="pictures"]
 .whiteback
 {
     display: block;
-    position: fixed;
-    bottom: 5%;
-    top: 5%;
-    left: 5%;
-    right: 5%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 960px;
+    width: 90%;
     max-height: 90%;
     border: 3px solid #2b2b2b;
     border-radius: 10px;
     background-color: #fff;
     z-index: -10;
+
 }
 
 .loading
