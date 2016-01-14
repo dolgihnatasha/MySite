@@ -15,7 +15,7 @@ var loadingGIF = 'http://www.novalnet.de/sites/all/themes/novalnetag/images/ajax
 
 addEvents('change', 'checkPicture', openFullPicture);
 
-addBackContent();
+//addBackContent();
 
 function addEvents(eventType, className, eventFunction) {
     var elements = document.getElementsByClassName(className);
@@ -44,11 +44,11 @@ function openFullPicture(e, curInput) {
     if (e) {
         curInput = e.target;
     }
-    if (!document.querySelector('#' + curInput.id + '~ .picFull .picture')){
+    if (!document.querySelector('#' + curInput.id + '~ .picFull .whiteback .picture')){
         var img = document.querySelector('#' + curInput.id + ' ~ .smallPic .picture');
         var imgName = img.getAttribute('data-picname');
         var fullPic = newFullPicture(imgName);
-        document.querySelector('#' + curInput.id + '~ .picFull').appendChild(fullPic);
+        document.querySelector('#' + curInput.id + '~ .picFull .whiteback').appendChild(fullPic);
     }
 }
 

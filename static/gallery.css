@@ -1,3 +1,50 @@
+/*input[name="pictures"]*/
+/*{*/
+    /*display: none;*/
+/*}*/
+
+
+/*.picContainer*/
+/*{*/
+    /*margin-top: 10px;*/
+    /*margin-bottom: 10px;*/
+    /*height: 200px;*/
+/*}*/
+/*.picContainer:hover*/
+/*{*/
+    /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, .6);*/
+/*}*/
+
+/*.picContainer .smallPic*/
+/*{*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.picContainer label .picture*/
+/*{*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*object-fit: cover;*/
+/*}*/
+
+/*.picFull*/
+/*{*/
+    /*display: none;*/
+    /*text-align: center;*/
+    /*position: absolute;*/
+    /*!*object-fit: cover;*!*/
+    /*!*bottom: 5%;*!*/
+    /*!*top: 5%;*!*/
+    /*!*left: 5%;*!*/
+    /*!*right: 5%;*!*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*z-index: 100;*/
+    /*background-color: rgba(0, 0, 0, .6);*/
+/*}*/
+
+
 input[name="pictures"]
 {
     display: none;
@@ -33,79 +80,71 @@ input[name="pictures"]
     display: none;
     text-align: center;
     position: fixed;
-    object-fit: cover;
-    bottom: 5%;
-    top: 5%;
-    left: 5%;
-    right: 5%;
+    background-color: rgba(0, 0, 0, .6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.picFull .picture
+{
+    max-width: 90%;
     max-height: 90%;
-    width: auto;
-    z-index: 100;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin: auto;
 }
 
 .cross
 {
     position: absolute;
     display: block;
-    right: 5%;
-    top: 0;
-    color: #fff;
-    height: 70px;
-    width: 70px;
-    font: 800 60px sans-serif;
+    right: 1%;
+    top: 1%;
+    height: 5%;
+    width: 5%;
 }
 
-.blackout
+.cross img
 {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    z-index: 99;
-    background-color: rgba(0, 0, 0, .6);
-    justify-content: center;
-    align-items: center;
 }
 
-.checkPicture:checked ~ .whiteback
+.whiteback
 {
-    height: 95%;
-    width: 90%;
-    position: relative;
+    display: block;
+    position: fixed;
+    bottom: 5%;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    max-height: 90%;
+    border: 3px solid #2b2b2b;
+    border-radius: 10px;
     background-color: #fff;
-    top: 50%;
-    bottom: 50%;
+    z-index: -10;
+}
+
+.loading
+{
+    height: 10%;
+    width: 10%;
+    vertical-align: middle;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #fff;
+    top: 45%;
+    left: 45%;
 }
 
 
 .checkPicture:checked ~ .picFull
 {
-    display: flex; /*fix for ie 8*/
-    align-items: center;
-    justify-content: center;
-}
-
-.checkPicture:checked ~ .blackout
-{
     display: block;
 }
-.checkPicture:checked ~ .picFul .cross
-{
-    display: block;
-}
-
-.checkPicture:checked ~ .picFull .picture
-{
-    max-width: 90%;
-    max-height: 100%;
-    height: auto;
-}
-
-/*.checkPicture:checked ~ .blackout .loading*/
-/*{*/
-    /**/
-/*}*/
 
 

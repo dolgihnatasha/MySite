@@ -7,13 +7,19 @@
         %i += 1
         <div class="picContainer grid_3">
             <input type="radio" name="pictures" class="checkPicture" id="pic{{ i }}">
-                <div class="picFull">
-                <label for="close" class="cross">X</label>
+            <div class="picFull">
+                <div class="whiteback">
+                    <label for="close" class="cross">
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/cross-24-512.png">
+                    </label>
+                    <img class="loading"
+                         src="http://www.novalnet.de/sites/all/themes/novalnetag/images/ajax-loader.gif">
+                </div>
             </div>
             <label class="smallPic" for="pic{{ i }}">
                 <img class="picture" src="/static/RV/small/{{ pic }}" data-picname="{{ pic }}">
             </label>
-            <div class="blackout"></div>
+
         </div>
     %end
 </section>
