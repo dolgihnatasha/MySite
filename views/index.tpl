@@ -6,7 +6,10 @@
                            alt="моя фотка"></div>
     <div class="grid_6 myInfo">
         <p>
-            {{ aboutMe }}
+            Меня зовут Наталья. Учусь на 3 курсе <a target="_blank" href="http://imkn.urfu.ru/">матмеха</a>
+            <a target="_blank" href="http://urfu.ru/ru/">УрФУ</a> на кафедре КВМ в веб-группе.
+            Увлекаюсь программированием.
+            Больше всего интересует веб-разработка
         </p>
     </div>
 </section>

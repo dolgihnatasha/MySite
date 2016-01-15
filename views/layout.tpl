@@ -23,9 +23,9 @@
     <footer>
         <div class="container_12">
             <div class="links grid_4">
-                <a target="_blank" href=""><img class="contactLink" alt="ufu link"
+                <a target="_blank" href="http://urfu.ru/ru/"><img class="contactLink" alt="ufu link"
                                                 src="https://sts.urfu.ru/adfs/portal/logo/logo.ru.png?id=C87B799C7B171E40C45B877734E33A187F073FA49E811309F93601B84A38E7CF"></a>
-                <a target="_blank" href=""><img class="contactLink" alt="mm link" src="http://cs623830.vk.me/v623830655/5f663/1QOVEtPLi9Q.jpg"></a>
+                <a target="_blank" href="http://imkn.urfu.ru/"><img class="contactLink" alt="mm link" src="http://cs623830.vk.me/v623830655/5f663/1QOVEtPLi9Q.jpg"></a>
             </div>
             <div class="visits grid_2">Посещений:{{visits}}</div>
             <div class="visits grid_2">Уникальных:{{unique}}</div>
