@@ -10,14 +10,13 @@
             <div class="picFull">
                 <div class="whiteback">
                     <label for="close" class="cross">
-                        <img alt="close"
-                             src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/cross-24-512.png">
+                        <img alt="close" src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/cross-24-512.png">
                     </label>
                     <img alt="loading" class="loading" src="http://tobago.it/fragments/loading.gif">
                 </div>
             </div>
             <label class="smallPic" for="pic{{ i }}">
-                <img alt="pictre {{ pic }}" class="picture" src="/static/RV/small/{{ pic }}" data-picname="{{ pic }}">
+                <img alt="picture {{ pic }}" class="picture" src="/static/RV/small/{{ pic }}" data-picname="{{ pic }}">
             </label>
         </div>
     %end
