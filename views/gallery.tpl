@@ -1,6 +1,6 @@
 % rebase('layout.tpl', title=title, stylesheet=stylesheet, visits=visits, unique=unique)
 
-<section class="gallery container_12">
+<div class="gallery container_12">
     <input type="radio" name="pictures" class="closeImg" id="close" checked>
     %i = 0
     %for pic in pictures:
@@ -19,8 +19,7 @@
             <label class="smallPic" for="pic{{ i }}">
                 <img alt="pictre {{ pic }}" class="picture" src="/static/RV/small/{{ pic }}" data-picname="{{ pic }}">
             </label>
-
         </div>
     %end
-</section>
+</div>
 <script type="text/javascript" src="/static/gallery.js"></script>
