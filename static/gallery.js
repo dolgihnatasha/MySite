@@ -9,13 +9,15 @@ var KEYCODE = {
     F1:112,
     ESC: 27
 };
+
 var close = document.getElementById('close');
 var fullPicPath = 'static/RV/full/';
 var loadingGIF = 'http://www.novalnet.de/sites/all/themes/novalnetag/images/ajax-loader.gif';
 
 addEvents('change', 'checkPicture', openFullPicture);
+addEvents('change', 'makeTitle', setTitlePicture);
 
-//addBackContent();
+
 
 function addEvents(eventType, className, eventFunction) {
     var elements = document.getElementsByClassName(className);
@@ -36,6 +38,19 @@ function addBackContent() {
         var picCont = picContainers[i];
         var blackOut = picCont.lastElementChild;
         blackOut.appendChild(whiteBack);
+    }
+}
+
+function setTitlePicture(e, curInput) {
+    if (e) {
+        curInput = e.target;
+    }
+    var img = document.querySelector('#' + curInput.id + '~ .picFull .whiteback .picture');
+
+    if (!document.querySelector('.titlePicture .picture')) {
+        document.querySelector('.titlePicture').appendChild(img.cloneNode(false));
+    } else {
+        document.querySelector('.titlePicture').replaceChild(img.cloneNode(false), document.querySelector('.titlePicture .picture'));
     }
 }
 
@@ -103,17 +118,22 @@ function closePic() {
     close.checked = true;
 }
 
-document.getElementsByTagName('html').item(0).onkeydown = function(e) {
-    if (e.keyCode == KEYCODE.RIGHT){
+document.getElementsByTagName('html').item(0).onkeydown = function(event) {
+    if (event.keyCode == KEYCODE.RIGHT){
         nextPic();
     }
-    if (e.keyCode == KEYCODE.LEFT){
+    if (event.keyCode == KEYCODE.LEFT){
         prevPic();
     }
-    if (e.keyCode == KEYCODE.F1){
+    if (event.keyCode == KEYCODE.F1){
         alert('Стрелка вправо - следующая картинка,\nстрелка влево - предыдущая,\nECS - закрыть картику')
     }
-    if (e.keyCode == KEYCODE.ESC) {
+    if (event.keyCode == KEYCODE.ESC) {
         closePic();
+    }
+    if (event.preventDefault) {
+        event.preventDefault()
+    } else {
+        return false;
     }
 };

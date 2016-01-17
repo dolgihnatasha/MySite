@@ -5,6 +5,7 @@ Routes and views for the bottle application.
 from bottle import route, view, response, request
 import os
 import json
+import random
 
 myphoto = 'https://avatars0.githubusercontent.com/u/6077501?v=3&s=460'
 
@@ -71,7 +72,7 @@ def gallery():
     return dict(
         title='Gallery',
         stylesheet='gallery.css',
-        scripts='',
+        order=random.sample(range(0, 10), 10),
         pictures=pics,
         visits=v['visit'],
         unique=len(v['unique'])
@@ -89,3 +90,6 @@ def projects():
         visits=v['visit'],
         unique=len(v['unique'])
     )
+
+
+
