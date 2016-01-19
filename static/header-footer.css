@@ -73,6 +73,7 @@ footer .mylink
 .contactLink
 {
     height: 40px;
+    border: none;
 }
 
 footer .visits

@@ -20,6 +20,8 @@ addEvents('change', 'makeTitle', setTitlePicture);
 
 
 function addEvents(eventType, className, eventFunction) {
+    console.log('add events');
+    console.log('');
     var elements = document.getElementsByClassName(className);
     for (var i = 0; i < elements.length; i++) {
         elements[i].addEventListener(eventType, eventFunction)
@@ -42,6 +44,7 @@ function addBackContent() {
 }
 
 function setTitlePicture(e, curInput) {
+    console.log('set title picture');
     if (e) {
         curInput = e.target;
     }
@@ -56,6 +59,7 @@ function setTitlePicture(e, curInput) {
 
 
 function openFullPicture(e, curInput) {
+    console.log('open full picture');
     if (e) {
         curInput = e.target;
     }
@@ -68,6 +72,7 @@ function openFullPicture(e, curInput) {
 }
 
 function newFullPicture(picName) {
+    console.log('get full picture');
     var picFull = document.createElement('img');
     picFull.classList.add('picture');
     picFull.src = fullPicPath + picName;
@@ -76,6 +81,7 @@ function newFullPicture(picName) {
 
 
 function nextPic() {
+    console.log('next pic');
     var current = getCheckedInput('pictures');
     if (current && current[1] !== 0) {
         var inputs = current[0];
@@ -91,6 +97,7 @@ function nextPic() {
 }
 
 function prevPic() {
+    console.log('prev pic');
     var current = getCheckedInput('pictures');
     if (current && current[1] !== 0) {
         var inputs = current[0];
@@ -106,6 +113,7 @@ function prevPic() {
 }
 
 function getCheckedInput(inputName) {
+    console.log('checked inputs');
     var inputs = document.getElementsByName(inputName);
     for (var i = 0; i < inputs.length; i++) {
         if (inputs[i].checked) {
@@ -115,10 +123,12 @@ function getCheckedInput(inputName) {
 }
 
 function closePic() {
+    console.log('close');
     close.checked = true;
 }
 
 document.getElementsByTagName('html').item(0).onkeydown = function(event) {
+    console.log('key pressed');
     if (event.keyCode == KEYCODE.RIGHT){
         nextPic();
     }

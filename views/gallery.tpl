@@ -1,8 +1,8 @@
 % rebase('layout.tpl', title=title, stylesheet=stylesheet, visits=visits, unique=unique)
 
 <input type="radio" name="makeTitle" class="resetTitle" id="reset" checked>
+<label class="resetTitle grid_12" for="reset">Сбросить</label>
 <div class="titlePicture grid_12">
-    <label class="resetTitle" for="reset">Сбросить</label>
 </div>
 
 <div class="gallery container_12">
