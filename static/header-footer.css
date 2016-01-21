@@ -1,12 +1,19 @@
-@font-face
-{
-    font-family: menuTitleFont;
-    src: url(fonts/amplify.ttf);
+/*@font-face*/
+/*{*/
+/*font-family: menuTitleFont;*/
+/*src: url(./fonts/amplify.ttf) format('truetype');*/
+/*}*/
+@font-face {
+    font-family: 'menuTitleFont';
+    src: url('fonts/amplify.eot');
+    src: url('fonts/amplify.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face
 {
     font-family: footerFont;
-    src: url(fonts/katherine_plus.ttf);
+    src: url(./fonts/katherine_plus.ttf) format('truetype');
 }
 
 body, main, footer, section, article {
@@ -73,7 +80,7 @@ footer .mylink
 .contactLink
 {
     height: 40px;
-    border: none;
+    color: #fff;
 }
 
 footer .visits

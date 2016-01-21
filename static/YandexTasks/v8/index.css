@@ -1,0 +1,299 @@
+body,
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    perspective: 800px;
+}
+
+.wrapper {
+    height: 200px;
+    width: 250px;
+    min-width: 250px;
+    display: block;
+    perspective: 200px;
+    box-shadow: 0 10px 25px -5px rgba(50, 50, 50, .75);
+}
+
+.wrapper label {
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+.wrapper label img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+input {
+    display: none;
+}
+
+.wrapper {
+    transition-property: z-index, transform;
+    transition-duration: .3s, 1.5s;
+}
+
+/*########################################## pic1 ##########################################*/
+
+#pic1:checked ~ main .wrapper[data-picture='1'] {
+    transform: translate(300%) scale(1.1);
+}
+
+#pic1:checked ~ main .wrapper[data-picture='2'] {
+    transform: translateX(300%) translate3D(-30%, 0, -40px) rotateY(-70deg);
+    z-index: -10;
+}
+
+#pic1:checked ~ main .wrapper[data-picture='3'] {
+    transform: translateX(300%) translate3D(-90%, 0, -80px) rotateY(-60deg);
+    z-index: -20;
+}
+
+#pic1:checked ~ main .wrapper[data-picture='4'] {
+    transform: translateX(300%) translate3D(-150%, 0, -120px) rotateY(-50deg);
+    z-index: -30;
+}
+
+#pic1:checked ~ main .wrapper[data-picture='5'] {
+    transform: translateX(300%) translate3D(-210%, 0, -160px) rotateY(-40deg);
+    z-index: -40;
+}
+
+#pic1:checked ~ main .wrapper[data-picture='6'] {
+    transform: translateX(300%) translate3D(-270%, 0, -200px) rotateY(-30deg);
+    z-index: -50;
+}
+
+#pic1:checked ~ main .wrapper[data-picture='7'] {
+    transform: translateX(300%) translate3D(-330%, 0, -240px) rotateY(-20deg);
+    z-index: -60;
+}
+
+/*########################################## pic2 ##########################################*/
+
+#pic2:checked ~ main .wrapper[data-picture='1'] {
+    transform: translateX(200%) translate3D(30%, 0, -40px) rotateY(70deg);
+    z-index: -10;
+}
+
+#pic2:checked ~ main .wrapper[data-picture='2'] {
+    transform: translate(200%) scale(1.1);
+}
+
+#pic2:checked ~ main .wrapper[data-picture='3'] {
+    transform: translateX(200%) translate3D(-30%, 0, -40px) rotateY(-70deg);
+    z-index: -20;
+}
+
+#pic2:checked ~ main .wrapper[data-picture='4'] {
+    transform: translateX(200%) translate3D(-90%, 0, -80px) rotateY(-60deg);
+    z-index: -30;
+}
+
+#pic2:checked ~ main .wrapper[data-picture='5'] {
+    transform: translateX(200%) translate3D(-150%, 0, -120px) rotateY(-50deg);
+    z-index: -40;
+}
+
+#pic2:checked ~ main .wrapper[data-picture='6'] {
+    transform: translateX(200%) translate3D(-210%, 0, -160px) rotateY(-40deg);
+    z-index: -50;
+}
+
+#pic2:checked ~ main .wrapper[data-picture='7'] {
+    transform: translateX(200%) translate3D(-270%, 0, -200px) rotateY(-30deg);
+    z-index: -60;
+}
+
+/*########################################## pic3 ##########################################*/
+
+#pic3:checked ~ main .wrapper[data-picture='1'] {
+    transform: translateX(100%) translate3D(90%, 0, -80px) rotateY(60deg);
+    z-index: -20;
+}
+
+#pic3:checked ~ main .wrapper[data-picture='2'] {
+    transform: translateX(100%) translate3D(30%, 0, -40px) rotateY(70deg);
+    z-index: -10;
+}
+
+#pic3:checked ~ main .wrapper[data-picture='3'] {
+    transform: translateX(100%) scale(1.1);
+}
+
+#pic3:checked ~ main .wrapper[data-picture='4'] {
+    transform: translateX(100%) translate3D(-30%, 0, -40px) rotateY(-70deg);
+    z-index: -10;
+}
+
+#pic3:checked ~ main .wrapper[data-picture='5'] {
+    transform: translateX(100%) translate3D(-90%, 0, -80px) rotateY(-60deg);
+    z-index: -20;
+}
+
+#pic3:checked ~ main .wrapper[data-picture='6'] {
+    transform: translateX(100%) translate3D(-150%, 0, -120px) rotateY(-50deg);
+    z-index: -30;
+}
+
+#pic3:checked ~ main .wrapper[data-picture='7'] {
+    transform: translateX(100%) translate3D(-210%, 0, -160px) rotateY(-40deg);
+    z-index: -40;
+}
+
+/*########################################## pic4 ##########################################*/
+
+#pic4:checked ~ main .wrapper[data-picture='1'] {
+    transform: translate3d(150%, 0, -120px) rotateY(50deg);
+    z-index: -30;
+}
+
+#pic4:checked ~ main .wrapper[data-picture='2'] {
+    transform: translate3d(90%, 0, -80px) rotateY(60deg);
+    z-index: -20;
+}
+
+#pic4:checked ~ main .wrapper[data-picture='3'] {
+    transform: translate3D(30%, 0, -40px) rotateY(70deg);
+    z-index: -10;
+}
+
+#pic4:checked ~ main .wrapper[data-picture='4'] {
+    transform: scale(1.1);
+}
+
+#pic4:checked ~ main .wrapper[data-picture='5'] {
+    transform: translate3D(-30%, 0, -40px) rotateY(-70deg);
+    z-index: -10;
+}
+
+#pic4:checked ~ main .wrapper[data-picture='6'] {
+    transform: translate3d(-90%, 0, -80px) rotateY(-60deg);
+    z-index: -20;
+}
+
+#pic4:checked ~ main .wrapper[data-picture='7'] {
+    transform: translate3d(-150%, 0, -120px) rotateY(-50deg);
+    z-index: -30;
+}
+
+/*########################################## pic5 ##########################################*/
+
+#pic5:checked ~ main .wrapper[data-picture='1'] {
+    transform: translateX(-100%) translate3D(210%, 0, -160px) rotateY(40deg);
+    z-index: -40;
+}
+
+#pic5:checked ~ main .wrapper[data-picture='2'] {
+    transform: translateX(-100%) translate3D(150%, 0, -120px) rotateY(50deg);
+    z-index: -30;
+}
+
+#pic5:checked ~ main .wrapper[data-picture='3'] {
+    transform: translateX(-100%) translate3D(90%, 0, -80px) rotateY(60deg);
+    z-index: -20;
+}
+
+#pic5:checked ~ main .wrapper[data-picture='4'] {
+    transform: translateX(-100%) translate3D(30%, 0, -40px) rotateY(70deg);
+    z-index: -10;
+}
+
+#pic5:checked ~ main .wrapper[data-picture='5'] {
+    transform: translateX(-100%) scale(1.1);
+
+}
+
+#pic5:checked ~ main .wrapper[data-picture='6'] {
+    transform: translateX(-100%) translate3D(-30%, 0, -40px) rotateY(-70deg);
+    z-index: -10;
+}
+
+#pic5:checked ~ main .wrapper[data-picture='7'] {
+    transform: translateX(-100%) translate3D(-90%, 0, -80px) rotateY(-60deg);
+    z-index: -20;
+}
+
+/*########################################## pic6 ##########################################*/
+
+#pic6:checked ~ main .wrapper[data-picture='1'] {
+    transform: translateX(-200%) translate3D(270%, 0, -240px) rotateY(30deg);
+    z-index: -50;
+}
+
+#pic6:checked ~ main .wrapper[data-picture='2'] {
+    transform: translateX(-200%) translate3D(210%, 0, -200px) rotateY(40deg);
+    z-index: -40;
+}
+
+#pic6:checked ~ main .wrapper[data-picture='3'] {
+    transform: translateX(-200%) translate3D(150%, 0, -160px) rotateY(50deg);
+    z-index: -30;
+}
+
+#pic6:checked ~ main .wrapper[data-picture='4'] {
+    transform: translateX(-200%) translate3D(90%, 0, -120px) rotateY(60deg);
+    z-index: -20;
+}
+
+#pic6:checked ~ main .wrapper[data-picture='5'] {
+    transform: translateX(-200%) translate3D(30%, 0, -80px) rotateY(70deg);
+    z-index: -10;
+}
+
+#pic6:checked ~ main .wrapper[data-picture='6'] {
+    transform: translateX(-200%) scale(1.1);
+}
+
+#pic6:checked ~ main .wrapper[data-picture='7'] {
+    transform: translateX(-200%) translate3D(-30%, 0, -40px) rotateY(-70deg);
+    z-index: -40;
+}
+
+/*########################################## pic7 ##########################################*/
+
+#pic7:checked ~ main .wrapper[data-picture='1'] {
+    transform: translateX(-300%) translate3D(330%, 0, -240px) rotateY(20deg);
+    z-index: -60;
+}
+
+#pic7:checked ~ main .wrapper[data-picture='2'] {
+    transform: translateX(-300%) translate3D(270%, 0, -200px) rotateY(30deg);
+    z-index: -50;
+}
+
+#pic7:checked ~ main .wrapper[data-picture='3'] {
+    transform: translateX(-300%) translate3D(210%, 0, -160px) rotateY(40deg);
+    z-index: -40;
+}
+
+#pic7:checked ~ main .wrapper[data-picture='4'] {
+    transform: translateX(-300%) translate3D(150%, 0, -120px) rotateY(50deg);
+    z-index: -30;
+}
+
+#pic7:checked ~ main .wrapper[data-picture='5'] {
+    transform: translateX(-300%) translate3D(90%, 0, -80px) rotateY(60deg);
+    z-index: -20;
+}
+
+#pic7:checked ~ main .wrapper[data-picture='6'] {
+    transform: translateX(-300%) translate3D(30%, 0, -40px) rotateY(70deg);
+    z-index: -10;
+}
+
+#pic7:checked ~ main .wrapper[data-picture='7'] {
+    transform: translateX(-300%) scale(1.1);
+}

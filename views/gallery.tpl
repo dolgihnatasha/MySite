@@ -11,7 +11,7 @@
     %for numb in order:
         %pic = pictures[numb]
         %i += 1
-        <div class="picContainer grid_3">
+    <div class="picContainer grid_3 omega">
             <input type="radio" name="pictures" class="checkPicture" id="pic{{ i }}">
 
             <input type="radio" name="makeTitle" class="makeTitle" id="start{{ i }}">

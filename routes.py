@@ -6,6 +6,7 @@ from bottle import route, view, response, request
 import os
 import json
 import random
+from datetime import datetime as dt
 
 myphoto = 'https://avatars0.githubusercontent.com/u/6077501?v=3&s=460'
 
@@ -24,11 +25,17 @@ def read_visits():
 def add_visits(change):
     data = read_visits()
     if 'unique' not in data.keys():
-        data['unique'] = list()
+        data['unique'] = dict()
+    if 'visit' not in data.keys():
+        data['visit'] = 0
     if change:
         data['visit'] += 1
-        if request.get('REMOTE_ADDR') not in data['unique']:
-            data['unique'].append(request.get('REMOTE_ADDR'))
+        ip = request.get('REMOTE_ADDR')
+        if ip not in data['unique'].keys():
+            data['unique'][ip] = [dt.ctime(dt.now())]
+        else:
+            data['unique'][ip].append(dt.ctime(dt.now()))
+    # date fromm string to datetime: dt.strptime(time, "%a %b %d %X %Y")
     print(request.get('REMOTE_ADDR'), data)
     write_visits(data)
     return data
@@ -78,8 +85,7 @@ def gallery():
         unique=len(v['unique'])
     )
 
-@route('/projects')
-@route('/index2')
+@route('/other')
 @view('projects')
 def projects():
     """Renders the project page."""

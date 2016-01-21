@@ -1,0 +1,262 @@
+body {
+    background-color: rgba(234, 234, 234, .51);
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 2px ridge #fff;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    min-width: 760px;
+    padding: 0 5px;
+}
+
+section article {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: .3em;
+    max-height: 500px;
+}
+
+section article img {
+    width: 100%;
+    object-fit: cover;
+}
+
+span {
+    font-size: 23px;
+    font-weight: lighter;
+    display: block;
+}
+
+section article:nth-child(8n+1),
+section article:nth-child(8n+3),
+section article:nth-child(8n+4),
+section article:nth-child(8n+5),
+section article:nth-child(8n+7) {
+    width: 32%;
+}
+
+section article:nth-child(8n+2),
+section article:nth-child(8n+6) {
+    width: 65%;
+}
+
+section article:nth-child(8n) {
+    width: 98%;
+}
+
+.breed {
+    display: none;
+}
+
+.breed#siam-breed:checked ~ section article:not(.siam),
+.breed#abys-breed:checked ~ section article:not(.abys),
+.breed#brit-breed:checked ~ section article:not(.brit),
+.breed#russ-breed:checked ~ section article:not(.russ) {
+    opacity: .4;
+}
+
+.breed#siam-breed:checked ~ menu .menuitem[for='siam-breed'],
+.breed#abys-breed:checked ~ menu .menuitem[for='abys-breed'],
+.breed#brit-breed:checked ~ menu .menuitem[for='brit-breed'],
+.breed#russ-breed:checked ~ menu .menuitem[for='russ-breed'] {
+    background-color: #5a5a5a;
+    color: white;
+}
+
+.name {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: 200px;
+    height: 80px;
+    background-color: transparent;
+    color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    text-align: center;
+}
+
+section article:hover > .name {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.menubox {
+    display: flex;
+    flex-flow: column;
+    width: 15%;
+    min-width: 100px;
+    margin: .3em;
+    background-color: rgba(216, 216, 216, .51);
+}
+
+.menubox.left > label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 2px ridge #fff;
+    height: 80px;
+}
+
+.menubox.left > label > span {
+    margin-left: 10px;
+}
+
+menu {
+    padding: 0;
+}
+
+.menubox.right {
+    height: 100%;
+    padding: 10px;
+}
+
+h2 {
+    color: red;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.sort + label {
+    cursor: pointer;
+}
+
+.sort:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+
+.sort:not(checked) + label {
+    position: relative;
+    padding: 0 60px 0 0;
+}
+
+.sort:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background: #cdd1da;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, .2);
+}
+
+.sort:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: 26px;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    transition: all .2s;
+}
+
+.sort:checked + label:before {
+    background: #63ff47;
+}
+
+.sort:checked + label:after {
+    right: 2px;
+}
+
+.sort:focus + label:before {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .5),
+    inset 0 2px 3px rgba(0, 0, 0, .2);
+}
+
+.menubox.right .block {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin: 10px 0;
+}
+
+.firstline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    height: 15px;
+    border: 1px solid #3c3f41;
+    background: linear-gradient(to right, transparent 0%, white 100%);
+}
+
+.abys .rating {
+    background-color: #07e871;
+    border-color: #00b053;
+    width: 90%;
+}
+
+.russ .rating {
+    background-color: #09e872;
+    border-color: #00b053;
+    width: 100%;
+}
+
+.brit .rating {
+    background-color: #fdf610;
+    border-color: #c2bb01;
+    width: 80%;
+}
+
+.siam .rating {
+    background-color: #e70803;
+    border-color: #b00401;
+    width: 40%;
+}
+
+.sort:checked ~ .russ {
+    display: flex;
+    order: 1;
+}
+
+.sort:checked ~ .abys {
+    display: flex;
+    order: 2;
+}
+
+.sort:checked ~ .brit {
+    display: flex;
+    order: 3;
+}
+
+.sort:checked ~ .siam {
+    display: flex;
+    order: 4;
+}

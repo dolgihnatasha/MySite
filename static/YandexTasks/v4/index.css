@@ -1,0 +1,88 @@
+body {
+    background-color: beige;
+    font-family: 'Noto Serif', serif;
+    max-width: 940px;
+    margin: auto;
+}
+
+header {
+    border: 3px double black;
+    text-align: center;
+}
+
+main {
+    -webkit-column-count: 2;
+    -webkit-column-rule: 2px dotted black;
+    -moz-column-count: 2;
+    -moz-column-rule: 2px dotted black;
+}
+
+section {
+    margin: 0 20px 20px;
+    column-count: 2;
+    column-rule: 2px dotted black;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Ruslan Display', 'Arial', fantasy;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Kelly Slab', 'Arial', sans-serif;
+}
+
+p {
+    font-size: .7em;
+    text-indent: 10px;
+    font-family: 'Noto Serif', serif;
+}
+
+.mainArticle > h2 {
+    font-size: 2em;
+    page-break-inside: avoid;
+}
+
+.smallArticle > h2 {
+    font-size: 1.3em;
+}
+
+.mainArticle {
+    -webkit-column-break-before: always;
+    break-before: always;
+}
+
+.mainArticle > div {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    text-align: justify;
+}
+
+.smallArticle > div {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    text-align: justify;
+}
+
+div::first-letter {
+    font-size: 1.5em;
+    font-family: 'Lobster', 'Ruslan Display', sans-serif;
+}
+
+div > figure {
+    width: 100%;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    text-align: center;
+    margin: 0;
+    font-size: 0.6em;
+    color: #959595;
+}
+
+figure > img {
+    max-width: 250px;
+    width: 100%;
+}

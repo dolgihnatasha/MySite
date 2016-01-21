@@ -13,7 +13,9 @@
             <div class="menuContainer container_12">
                 <a class="menuItem grid_4" href="index"><div><p>Main</p></div></a>
                 <a class="menuItem grid_4" href="gallery"><div><p>Gallery</p></div></a>
-                <a class="menuItem grid_4" href="projects"><div><p>Projects</p></div></a>
+                <a class="menuItem grid_4" href="other">
+                    <div><p>Other</p></div>
+                </a>
             </div>
         </header>
         <div class="main container_12">

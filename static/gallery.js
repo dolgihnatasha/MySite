@@ -22,9 +22,13 @@ addEvents('change', 'makeTitle', setTitlePicture);
 function addEvents(eventType, className, eventFunction) {
     console.log('add events');
     console.log('');
-    var elements = document.getElementsByClassName(className);
+    var elements = document.querySelectorAll("." + className);
     for (var i = 0; i < elements.length; i++) {
+        if (elements[i].addEventListener) {
         elements[i].addEventListener(eventType, eventFunction)
+        } else {
+            elements[i].attachEvent("on" + eventType, eventFunction);
+        }
     }
 }
 
@@ -144,6 +148,6 @@ document.getElementsByTagName('html').item(0).onkeydown = function(event) {
     if (event.preventDefault) {
         event.preventDefault()
     } else {
-        return false;
+        event.returnValue = false;
     }
 };
