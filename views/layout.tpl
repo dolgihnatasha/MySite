@@ -34,8 +34,12 @@
                 </a>
 
             </div>
-            <div class="visits grid_2">Посещений:{{visits}}</div>
-            <div class="visits grid_2">Уникальных:{{unique}}</div>
+            <div class="grid_4">
+                <div class="visits grid_2">По&shy;се&shy;ще&shy;ний:{{visits}}<br>Уни&shy;каль&shy;ных:{{unique}}
+                </div>
+                <div class="visits grid_2"><a href="visits">Ис&shy;то&shy;рия</a></div>
+            </div>
+
             <div class="mylink grid_4">
 
                 <a class="contactLink" target="_blank" href="https://vk.com/natasha.glukhovtseva">

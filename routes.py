@@ -2,11 +2,12 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view, response, request
+from bottle import route, view, response, request, error
 import os
 import json
 import random
 from datetime import datetime as dt
+from datetime import timedelta
 
 myphoto = 'https://avatars0.githubusercontent.com/u/6077501?v=3&s=460'
 
@@ -97,5 +98,38 @@ def projects():
         unique=len(v['unique'])
     )
 
+@route('/visits')
+@view('visits')
+def projects():
+    """Renders the visits page."""
+    v = check_visit()
+    visitsTable = []
+    for ip in v['unique']:
+        print(ip)
+        for t in v['unique'][ip]:
+            time = dt.strptime(t, "%a %b %d %X %Y")
+            time += timedelta(hours=5)
+            t = dt.ctime(time)
+            visitsTable.append((t, ip))
+    visitsTable = sorted(visitsTable, key=lambda x:dt.strptime(x[0], "%a %b %d %X %Y"))
+    return dict(
+        title='Projects',
+        stylesheet='visits.css',
+        visits=v['visit'],
+        unique=len(v['unique']),
+        visitsTable=visitsTable
+    )
 
 
+
+@error(404)
+@view('error')
+def error404(err):
+    """Renders the error page."""
+    v = check_visit()
+    return dict(
+        title='error',
+        stylesheet='index2.css',
+        visits=v['visit'],
+        unique=len(v['unique'])
+    )
