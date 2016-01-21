@@ -2,7 +2,7 @@
 
 <style>
     .error {
-        padding: 10px;
+        margin-top: 10px;
         width: 100%;
     }
 
@@ -18,6 +18,6 @@
 </style>
 
 
-<div class="error">
+<div class="error container_12">
     <img src="/static/pictures/404.png">
 </div>

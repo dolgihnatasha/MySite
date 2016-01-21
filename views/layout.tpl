@@ -34,7 +34,7 @@
                 </a>
 
             </div>
-            <div class="grid_4">
+            <div class="grid_4 ">
                 <div class="visits grid_2">По&shy;се&shy;ще&shy;ний:{{visits}}<br>Уни&shy;каль&shy;ных:{{unique}}
                 </div>
                 <div class="visits grid_2"><a href="visits">Ис&shy;то&shy;рия</a></div>

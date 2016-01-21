@@ -128,7 +128,7 @@ def error404(err):
     """Renders the error page."""
     v = check_visit()
     return dict(
-        title='error',
+        title='Error',
         stylesheet='index2.css',
         visits=v['visit'],
         unique=len(v['unique'])
