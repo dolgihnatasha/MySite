@@ -6,7 +6,7 @@
 @font-face {
     font-family: 'menuTitleFont';
     src: url('fonts/amplify.eot');
-    src: url('fonts/amplify.woff') format('woff');
+    src: url('fonts/amplify.woff') format('woff'), url(./fonts/amplify.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
