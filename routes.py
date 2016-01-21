@@ -92,7 +92,7 @@ def projects():
     """Renders the project page."""
     v = check_visit()
     return dict(
-        title='Projects',
+        title='Other',
         stylesheet='index2.css',
         visits=v['visit'],
         unique=len(v['unique'])
@@ -113,7 +113,7 @@ def projects():
             visitsTable.append((t, ip))
     visitsTable = sorted(visitsTable, key=lambda x:dt.strptime(x[0], "%a %b %d %X %Y"))
     return dict(
-        title='Projects',
+        title='Visits',
         stylesheet='visits.css',
         visits=v['visit'],
         unique=len(v['unique']),
