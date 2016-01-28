@@ -2,5 +2,8 @@ table, td, tr {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 3px;
-    border-radius: 10px;
+}
+
+table {
+    margin: 10px;
 }

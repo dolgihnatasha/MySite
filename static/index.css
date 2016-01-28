@@ -1,7 +1,7 @@
 @font-face
 {
     font-family: h1Font;
-    src: url(fonts/good_vibes.ttf);
+    src: url(fonts/subset-GoodVibesPro.woff) format('woff');
 }
 
 h1

@@ -15,7 +15,7 @@ var fullPicPath = 'static/RV/full/';
 var loadingGIF = 'http://www.novalnet.de/sites/all/themes/novalnetag/images/ajax-loader.gif';
 
 addEvents('change', 'checkPicture', openFullPicture);
-addEvents('change', 'makeTitle', setTitlePicture);
+addEvents('change', 'makeTitle', setBackgroundPicture);
 
 
 
@@ -47,7 +47,7 @@ function addBackContent() {
     }
 }
 
-function setTitlePicture(e, curInput) {
+function setBackgroundPicture(e, curInput) {
     console.log('set title picture');
     if (e) {
         curInput = e.target;
