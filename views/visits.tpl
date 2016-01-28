@@ -6,9 +6,11 @@
     %for entry in visitsTable:
     %ip = entry[1]
     %time = entry[0]
+    % browser = entry[2]
     <tr>
         <td>{{ip}}</td>
         <td>{{time}}</td>
+        <td>{{browser}}</td>
     </tr>
     %end
 </table>

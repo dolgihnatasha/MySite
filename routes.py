@@ -140,10 +140,10 @@ def projects():
         #print(ip)
         for t in v['unique'][ip]:
             # time = dt.strptime(t, "%a %b %d %X %Y")
-
             # t = dt.ctime(time)
-            visitsTable.append((t, ip))
+            visitsTable.append((t[0], ip, t[1]))
     visitsTable = sorted(visitsTable, key=lambda x:dt.strptime(x[0], "%a %b %d %X %Y"))
+    print(visitsTable)
     v = get_visits_info()
     result = dict(
         title='Visits',
