@@ -48,17 +48,19 @@ function addBackContent() {
 }
 
 function setBackgroundPicture(e, curInput) {
-    console.log('set title picture');
+    console.log('set background picture');
     if (e) {
         curInput = e.target;
     }
     var img = document.querySelector('#' + curInput.id + '~ .picFull .whiteback .picture');
+    var imgName = img.getAttribute('data-picname');
+    //document.cookie = "background=" + imgName + '; path=/;';
 
-    if (!document.querySelector('.titlePicture .picture')) {
-        document.querySelector('.titlePicture').appendChild(img.cloneNode(false));
-    } else {
-        document.querySelector('.titlePicture').replaceChild(img.cloneNode(false), document.querySelector('.titlePicture .picture'));
-    }
+    //if (!document.querySelector('.titlePicture .picture')) {
+    //    document.querySelector('.titlePicture').appendChild(img.cloneNode(false));
+    //} else {
+    //    document.querySelector('.titlePicture').replaceChild(img.cloneNode(false), document.querySelector('.titlePicture .picture'));
+    //}
 }
 
 
@@ -80,6 +82,7 @@ function newFullPicture(picName) {
     var picFull = document.createElement('img');
     picFull.classList.add('picture');
     picFull.src = fullPicPath + picName;
+    picFull.setAttribute('data-picname', picName);
     return picFull;
 }
 

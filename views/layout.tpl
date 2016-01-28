@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="/static/header-footer.css">
     <link rel="stylesheet" href="/static/css/960_12_col.css">
     <script type="text/javascript" src="/static/visitsCanvas.js"></script>
+    % if len({{background}}) > 0:
+    <style>
+        body {
+            background: url(/static/RV/small/{{background}});
+        }
+    </style>
+    %end
 </head>
 <body onload="draw({'visits':{{visits}}, 'unique':{{unique}}, 'today':{{today}}, 'last':'{{last}}'})">
     <div class="wrap">

@@ -1,9 +1,9 @@
 % rebase('layout.tpl', title=title, stylesheet=stylesheet, visits=visits, unique=unique)
 
-<input type="radio" name="makeTitle" class="resetTitle" id="reset" checked>
-<label class="resetTitle grid_12" for="reset">Сбросить</label>
-<div class="titlePicture grid_12">
-</div>
+<!--<input type="radio" name="makeTitle" class="resetTitle" id="reset" checked>-->
+<!--<label class="resetTitle grid_12" for="reset">Сбросить</label>-->
+<!--<div class="titlePicture grid_12">-->
+<!--</div>-->
 
 <div class="gallery container_12">
     <input type="radio" name="pictures" class="closeImg" id="close" checked>
@@ -14,7 +14,7 @@
     <div class="picContainer grid_3 omega">
             <input type="radio" name="pictures" class="checkPicture" id="pic{{ i }}">
 
-            <input type="radio" name="makeTitle" class="makeTitle" id="start{{ i }}">
+        <!--<input type="radio" name="makeTitle" class="makeTitle" id="start{{ i }}">-->
 
             <label class="smallPic" for="pic{{ i }}">
                 <img alt="picture {{ pic }}" class="picture" src="/static/RV/small/{{ pic }}" data-picname="{{ pic }}">
@@ -25,7 +25,7 @@
                     <label for="close" class="cross">
                         <img alt="close" src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/cross-24-512.png">
                     </label>
-                    <label for="start{{ i }}" class="">Set as background</label>
+                    <!--<label for="start{{ i }}" class="">Set as background</label>-->
                     <img alt="loading" class="loading" src="http://tobago.it/fragments/loading.gif">
                 </div>
             </div>
